@@ -1,0 +1,35 @@
+.pricing-container{
+    height: auto;
+    width: 100%;
+    background-color: #BFD9E3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:50px;
+}
+
+.pricing-container h1{
+    font-family: 'Montserrat',sans-serif;
+}
+
+.pricing-inner{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.white-box{
+    background-color: white;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.white-box p span{
+    font-size: 28px;
+    font-family: poppins;
+}
+
+.white-box p{
+    font-family: poppins;
+}

@@ -1,0 +1,48 @@
+/* Slider.css */
+
+.slider-container {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto;
+    height: auto;
+    padding:10px;
+    padding-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 70px;
+  }
+  
+  .rectangle {
+    width: 100%; /* Ensure it fits the slick slide */
+    height: 200px; /* Adjust height as needed */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding:10px;
+    margin-bottom:20px;
+  }
+  
+  /* Optional: Style the dots if enabled in settings */
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #000;
+  }
+  
+  /* Optional: Hide arrows if desired */
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
+  
+  /* Optional: Add space between slides */
+  .slick-slide {
+    padding: 0 20px;
+  }
+  
+  /* Center the slides */
+  .slick-list {
+    margin: 0 -10px; /* Match padding for slick-slide */
+  }
+  

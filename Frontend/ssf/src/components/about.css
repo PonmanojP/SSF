@@ -1,0 +1,44 @@
+.about-container{
+    height: auto;
+    width: 100%;
+    background-color: #263640;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-container h1{
+    text-align: center;
+    font-family: 'Montserrat';
+    color:white;
+    margin-top:60px;
+
+}
+
+.about-inner{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    align-items: center;
+}
+
+.about-inner p{
+    text-align: justify;
+    font-size: 20px;
+    color: white;
+    font-family: poppins;
+}
+
+.about-text{
+    width: 70%;
+}
+
+.about-img{
+    height: 400px;
+    width: 400px;
+}
+
+.about-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

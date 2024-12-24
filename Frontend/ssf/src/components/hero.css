@@ -1,0 +1,72 @@
+.hero-container {
+    position: relative;
+  }
+  
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with 50% opacity */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .intro-text h1{
+    font-size:60px;
+    line-height: 1px;
+  }
+
+  .intro-text h3{
+    font-size: 30px;
+  }
+
+  .intro-text h1,.intro-text h3{
+    color:white;
+    font-family: "Montserrat", serif;
+    text-align: center;
+  }
+
+  .intro-text h1 span{
+    color: #DE6E4B;
+  }
+
+  .intro-text h3 span{
+    color:#DE6E4B ;
+  }
+
+  .input-button{
+    height: 40px;
+    background-color: #263640;
+    border: none;
+    color: white;
+    padding:10px;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .input-field{
+    height: 40px;
+    width: 300px;
+    padding:15px;
+    border-radius: 10px 0px 0px 10px;
+    box-sizing: border-box;
+    border: none;
+  }
+
+
+  
