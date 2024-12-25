@@ -10,15 +10,17 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 70px;
+    font-family: 'Montserrat',sans-serif;
   }
   
   .rectangle {
     width: 100%; /* Ensure it fits the slick slide */
-    height: 200px; /* Adjust height as needed */
+    height: auto; /* Adjust height as needed */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding:10px;
     margin-bottom:20px;
+
   }
   
   /* Optional: Style the dots if enabled in settings */

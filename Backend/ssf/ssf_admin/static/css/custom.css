@@ -1,0 +1,37 @@
+/* Change the header background color */
+#header {
+    background-color: #bfd9e3; /* Light blue */
+}
+
+/* Change the title color */
+#header-title {
+    color: #DE6E4B; /* Coral */
+}
+
+/* Adjust the menu color */
+.grp-module, .grp-group-title {
+    background-color: #f4f4f4; /* Light gray */
+    color: #000; /* Black */
+}
+
+/* Hover effect for sidebar */
+.grp-group:hover {
+    background-color: #bfd9e3; /* Light blue */
+}
+
+/* Button colors */
+.grp-button, .grp-button-primary {
+    background-color: #DE6E4B; /* Coral */
+    border: none;
+    color: #fff;
+}
+
+/* Button hover effect */
+.grp-button:hover, .grp-button-primary:hover {
+    background-color: #B54E36; /* Darker coral */
+}
+
+/* Footer text color */
+#footer {
+    color: #666; /* Gray */
+}

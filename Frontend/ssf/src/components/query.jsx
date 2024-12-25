@@ -1,27 +1,91 @@
-import React from 'react'
-import './query.css'
+import React, { useState } from 'react';
+import './query.css';
 
 const Query = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone_number: '',
+    description: '',
+  });
+
+  const [message, setMessage] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/queries/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setMessage('Query submitted successfully!');
+        setFormData({ name: '', phone_number: '', description: '' }); // Reset form
+      } else {
+        const errorData = await response.json();
+        setMessage(`Error: ${JSON.stringify(errorData)}`);
+      }
+    } catch (error) {
+      setMessage(`Error: ${error.message}`);
+    }
+  };
+
   return (
     <div className='query-container'>
-      <p>Contact <span>Us</span> </p>
+      <p>Contact <span>Us</span></p>
       <p>Let's get in touch..</p>
-      <div class="form__group field">
-        <input type="input" class="form__field" placeholder="" name="name" id='name' required />
-        <label for="name" class="form__label">Name</label>
-      </div>
-      <br />
-      <div class="form__group field">
-        <input type="number" class="form__field" placeholder="" name="mobile" id='name' required />
-        <label for="mobile" class="form__label">Mobile</label>
-      </div>
-      <br />
-      <br />
-      <textarea placeholder="Describe you query to us" cols="40" rows="7"></textarea>
+      <form onSubmit={handleSubmit}>
+        <div className="form__group field">
+          <input
+            type="text"
+            className="form__field"
+            placeholder=""
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="name" className="form__label">Name</label>
+        </div>
         <br />
-      <button className='submit-btn'>Submit</button>
+        <div className="form__group field">
+          <input
+            type="text"
+            className="form__field"
+            placeholder=""
+            name="phone_number"
+            value={formData.phone_number}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="phone_number" className="form__label">Phone Number</label>
+        </div>
+        <br />
+        <br />
+        <textarea
+          placeholder="Describe your query to us"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          cols="40"
+          rows="7"
+          required
+        ></textarea>
+        <br />
+        <center><button type="submit" className='submit-btn'>Submit</button></center>
+      </form>
+      {message && <p className="response-message">{message}</p>}
     </div>
-  )
-}
+  );
+};
 
-export default Query
+export default Query;

@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "./slider.css"; // Make sure to define styles in a CSS file
 
 const RectangleSlider = () => {
-  const rectangles = [
-    { id: 1,},
-    { id: 2, },
-    { id: 3, },
-    { id: 4},
-  ];
+  const [feedbacks, setFeedbacks] = useState([]);
+
+  useEffect(() => {
+    const fetchFeedback = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/feedbacks/");
+        const data = await response.json();
+        setFeedbacks(data);
+      } catch (error) {
+        console.error("Error fetching feedback:", error);
+      }
+    };
+
+    fetchFeedback();
+  }, []);
 
   const settings = {
     dots: false,
@@ -26,13 +35,13 @@ const RectangleSlider = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {rectangles.map((rect) => (
-          <div key={rect.id}>
-            <div
-              className="rectangle">
-                <center><b> Ponmanoj P</b></center>
-                <br />  
-                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis blanditiis cumque rem vero, assumenda sunt verconsectetur adipisicing elit. Nulla, maiores omnis quo modi ratione laborum cupiditate dicta nesciunt magnam perferendis dolore optio nihil facere suscipit iste harum assumenda reiciendis! Beatae!</div>
+        {feedbacks.map((feed) => (
+          <div key={feed.id}>
+            <div className="rectangle">
+              <center><b>{feed.name}</b></center>
+              <br />
+              {feed.feedback}
+            </div>
           </div>
         ))}
       </Slider>

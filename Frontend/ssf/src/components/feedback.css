@@ -25,6 +25,7 @@
     justify-content: space-evenly;
     overflow: hidden;
     background: linear-gradient(90deg, #BFD9E3 15%, #BFD9E3 100%, rgba(0,212,255,1) 100%);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 .quote-img{
