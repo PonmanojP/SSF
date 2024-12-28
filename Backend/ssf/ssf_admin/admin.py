@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (
     Query, About, Service, Project, Feedback, Appointment,
-    StandardCategory, StandardItem, PremiumCategory, PremiumItem
+    StandardCategory, StandardItem, PremiumCategory, PremiumItem,StandardPrice, PremiumPrice, Socials
 )
 
 @admin.register(Query)
@@ -55,3 +55,15 @@ class PremiumItemInline(admin.TabularInline):
 class PremiumCategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
     inlines = [PremiumItemInline]
+
+@admin.register(StandardPrice)
+class StandardPriceAdmin(admin.ModelAdmin):
+    list_display = ('price',)
+
+@admin.register(PremiumPrice)
+class PremiumPriceAdmin(admin.ModelAdmin):
+    list_display = ('price',)
+
+@admin.register(Socials)
+class SocialsAdmin(admin.ModelAdmin):
+    list_display = ('mobile','whatsapp','mail','instagram','facebook')

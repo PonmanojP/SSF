@@ -155,3 +155,46 @@
       transform: scale(1);
     }
   }
+
+
+  @media screen and (max-width:992px) and (min-width:546px) {
+
+    .service-container{
+      height: auto;
+    }
+
+    .service-inner{
+      flex-wrap: wrap;
+    }
+
+      .flip-card{
+        width: 240px;
+        height: 350px;
+        margin-bottom: 40px;
+      }
+  }
+
+  @media(max-width:546px){
+    .service-container{
+      height: auto;
+    }
+
+    .service-container h1{
+      font-size: 26px;
+    }
+
+    .service-inner{
+      flex-wrap: wrap;
+    }
+
+      .flip-card{
+        width: 220px;
+        height: 300px;
+        margin-bottom: 40px;
+      }
+
+      .title{
+        font-size: 1rem;
+      }
+
+  }

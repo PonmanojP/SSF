@@ -1,5 +1,5 @@
 .projects-container{
-    height: 90.5svh;
+    height: auto;
     width: 100%;
     background-color: #263640;
     font-family: 'Montserrat',sans-serif;
@@ -46,6 +46,7 @@
     -ms-flex-pack: center;
     justify-content: center;
     color: #000;
+    margin-bottom: 40px;
   }
   
   .cover {
@@ -98,17 +99,20 @@
 
     justify-content: center;
     gap:40px;
+    flex-wrap: wrap;
   }
   
   .socials li {
     list-style: none;
+    
   }
   
   .socials li a {
     position: relative;
     width:60px;
     height:60px;
-    display:block;
+    display: grid;
+    place-content: center;
     text-align:center;
     margin:0 10px;
     border-radius: 50%;
@@ -124,35 +128,45 @@
     text-decoration:none;
   }
   
-  .socials li a .fab {
+  .socials li a .fab, .socials li a .fa {
     width: 100%;
     height:100%;
     display:block;
-    background: linear-gradient(0deg, #fff, #ddd);
     border-radius: 50%;
     line-height: calc(60px - 12px);
-    font-size:24px;
+    font-size:26px;
     color: #262626;
     transition: .5s;
   }
   
-  .socials li:nth-child(1) a:hover .fab {
-    color: #3b5998;
+
+
+  @media screen and (max-width:992px) and (min-width:678px) {
+    .projects-inner{
+      flex-wrap:wrap;
+      margin-bottom:40px;
+    }
   }
-  
-  .socials li:nth-child(2) a:hover .fab {
-    color: #00aced;
-  }
-  
-  .socials li:nth-child(3) a:hover .fab {
-    color: #dd4b39;
-  }
-  
-  .socials li:nth-child(4) a:hover .fab {
-    color: #007bb6;
-  }
-  
-  .socials li:nth-child(5) a:hover .fab {
-    color: #e4405f;
+
+  @media(max-width:677px){
+    .projects-inner{
+      flex-wrap:wrap;
+      margin-bottom:20px;
+    }
+
+    .projects-container h1{
+      font-size: 26px;
+    }
+
+    .socials{
+      gap:30px;
+    }
+
+    .book{
+      width:180px;
+      height: 250px;
+      font-size: 12px;
+    }
+
   }
 

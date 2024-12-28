@@ -16,26 +16,30 @@
 }
 
 .quote{
-    width: auto;
-    height: 200px;
+    width: 500px;
     border-radius: 10px;
-    background-color: #BFD9E3;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    background-color: #263640;
     overflow: hidden;
-    background: linear-gradient(90deg, #BFD9E3 15%, #BFD9E3 100%, rgba(0,212,255,1) 100%);
+    padding-bottom: 50px;
+    padding:20px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 .quote-img{
-    height: 200px;
-    width: 400px;
-    background-color: #263640;
+    height: 100%;
+    width: 100%;
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+}
+
+.input-button-quote{
+    height: 40px;
+    border:none;
+    border-radius:0px 10px 10px 0px;
+    background-color: coral;
 }
 
 .quote-img h1{
@@ -46,12 +50,45 @@
     color:white;
 }
 
-.right-quote{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat',sans-serif;
-    padding: 100px;
+.input-field-quote{
+    width: 300px;
+    border:none;
+    height: 40px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+@media screen and (max-width:992px) and (min-width:678px) {
+    .input-field-quote{
+        width: 200px;
+    }
+}
+
+@media(max-width:678px) and (min-width:420px){
+    .feedback-container h1{
+        font-size: 26px;
+    }
+
+    .quote{
+        width: 95%;
+    }
+
+    .input-field-quote{
+        width: 200px;
+    }
+}
+
+@media(max-width:420px){
+    .feedback-container h1{
+        font-size: 26px;
+    }
+
+    .quote{
+        width: 95%;
+    }
+
+    .input-field-quote{
+        width: 150px;
+    }
 }
 

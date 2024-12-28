@@ -30,7 +30,24 @@ const RectangleSlider = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 992, // Between 992px and 546px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 546, // Below 546px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+  
 
   return (
     <div className="slider-container">

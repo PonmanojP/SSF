@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Query, About, Service, Project, Feedback, Appointment, StandardCategory, StandardItem, PremiumCategory, PremiumItem
+from .models import Query, About, Service, Project, Feedback, Appointment, StandardCategory, StandardItem, PremiumCategory, PremiumItem,StandardPrice, PremiumPrice, Socials
 
 class QuerySerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,6 +31,16 @@ class AppointmentSerializer(serializers.ModelSerializer):
         model = Appointment
         fields = '__all__'
 
+class StandardPriceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StandardPrice
+        fields = '__all__'
+
+class PremiumPriceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PremiumPrice
+        fields = '__all__'
+
 class StandardCategorySerializer(serializers.ModelSerializer):
     items = serializers.StringRelatedField(many=True)
 
@@ -44,3 +54,9 @@ class PremiumCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = PremiumCategory
         fields = ['id', 'name', 'items']
+
+class SocialsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Socials
+        fields = '__all__'
+

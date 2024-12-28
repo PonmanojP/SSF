@@ -33,3 +33,36 @@
 .white-box p{
     font-family: poppins;
 }
+
+@media screen and (max-width:992px) and (min-width:678px) {
+    .pricing-container{
+        height: auto;
+    }
+    .pricing-inner{
+        flex-direction: column;
+        width: 600px;
+        justify-content: space-around;
+        gap:80px;
+    }
+}
+
+@media(max-width:677px){
+    .pricing-inner{
+        flex-direction: column;
+        max-width: 90%;
+        justify-content: space-around;
+        gap:80px;
+    }
+
+    .pricing-container h1{
+        font-size: 26px;
+    }
+
+    .white-box h1{
+        font-size: 26px;
+    }
+
+    .white-box p span{
+        font-size: 20px;
+    }
+}

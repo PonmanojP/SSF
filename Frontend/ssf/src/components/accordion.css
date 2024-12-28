@@ -77,4 +77,21 @@
   .list-item:last-child .separator {
     display: none;
   }
+
+  @media screen and (max-width:1200px) and (min-width:992px){
+    .accordion-container{
+      max-width: 400px;
+    }
+  }
+
+  @media(max-width:677px){
+    .accordion-button{
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .accordion-content{
+      font-size: 12px;
+    }
+  }
   

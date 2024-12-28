@@ -1,6 +1,6 @@
 from rest_framework import generics
-from .models import Query, About, Service, Project, Feedback, Appointment, StandardCategory, PremiumCategory
-from .serializers import QuerySerializer, AboutSerializer, ServiceSerializer, ProjectSerializer, FeedbackSerializer, AppointmentSerializer, StandardCategorySerializer, PremiumCategorySerializer
+from .models import Query, About, Service, Project, Feedback, Appointment, StandardCategory, PremiumCategory,StandardPrice, PremiumPrice, Socials
+from .serializers import QuerySerializer, AboutSerializer, ServiceSerializer, ProjectSerializer, FeedbackSerializer, AppointmentSerializer, StandardCategorySerializer, PremiumCategorySerializer, StandardPriceSerializer, PremiumPriceSerializer, SocialsSerializer
 
 class QueryList(generics.ListAPIView):
     queryset = Query.objects.all()
@@ -33,6 +33,19 @@ class StandardCategoryList(generics.ListAPIView):
 class PremiumCategoryList(generics.ListAPIView):
     queryset = PremiumCategory.objects.all()
     serializer_class = PremiumCategorySerializer
+
+class StandardPriceList(generics.ListAPIView):
+    queryset = StandardPrice.objects.all()
+    serializer_class = StandardPriceSerializer
+
+class PremiumPriceList(generics.ListAPIView):
+    queryset = PremiumPrice.objects.all()
+    serializer_class = PremiumPriceSerializer
+
+class SocialsList(generics.ListAPIView):
+    queryset = Socials.objects.all()
+    serializer_class = SocialsSerializer
+    
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response

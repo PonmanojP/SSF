@@ -40,18 +40,15 @@ const Feedback = () => {
       <div className='quote'>
         <div className='quote-img'>
           <h1><span>SS</span> Foundation</h1>
-        </div>
-        <div className='right-quote'>
-          <h2>Get Your Quote Now!</h2>
           <div className="input-container">
             <input
               type="text"
-              className="input-field"
+              className="input-field-quote"
               placeholder="Enter your Mobile number / Email"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
-            <button className="input-button" onClick={handleSubmit}>
+            <button className="input-button-quote" onClick={handleSubmit}>
               Get your quote now
             </button>
           </div>

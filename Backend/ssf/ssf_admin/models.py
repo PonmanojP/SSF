@@ -25,11 +25,21 @@ class Feedback(models.Model):
 class Appointment(models.Model):
     mobile_number = models.CharField(max_length=15)
 
+class StandardPrice(models.Model):
+    price = models.IntegerField()
+
 class StandardCategory(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
+
+class Socials(models.Model):
+    mobile = models.IntegerField()
+    whatsapp = models.CharField(max_length=150)
+    mail = models.CharField(max_length=150)
+    instagram = models.CharField(max_length=150)
+    facebook = models.CharField(max_length=150)
 
 
 class StandardItem(models.Model):
@@ -37,8 +47,10 @@ class StandardItem(models.Model):
     value = models.TextField()  # To store a single value for the array.
 
     def __str__(self):
-        return f"{self.category.name} - {self.value}"
+        return f"{self.value}"
 
+class PremiumPrice(models.Model):
+    price = models.IntegerField()
 
 class PremiumCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -52,4 +64,4 @@ class PremiumItem(models.Model):
     value = models.TextField()
 
     def __str__(self):
-        return f"{self.category.name} - {self.value}"
+        return f"{self.value}"
