@@ -10,7 +10,7 @@ const RectangleSlider = () => {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/feedbacks/");
+        const response = await fetch("https://ssfoundation.pythonanywhere.com/api/feedbacks/");
         const data = await response.json();
         setFeedbacks(data);
       } catch (error) {

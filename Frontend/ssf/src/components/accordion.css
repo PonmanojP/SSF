@@ -54,7 +54,8 @@
   }
   
   .accordion-content.open {
-    max-height: 500px; /* Adjust this value for larger content */
+    max-height:none; /* Adjust this value for larger content */
+    transition: max-height 0.3s ease;
   }
   
   ul {

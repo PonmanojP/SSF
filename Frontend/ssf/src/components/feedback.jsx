@@ -8,7 +8,7 @@ const Feedback = () => {
   const handleSubmit = async () => {
     if (inputValue.trim()) {
       try {
-        const response = await fetch('http://localhost:8000/api/create-appointment/', {
+        const response = await fetch('https://ssfoundation.pythonanywhere.com/api/create-appointment/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

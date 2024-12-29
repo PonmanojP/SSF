@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './query.css';
 
-const Query = () => {
+const Query2 = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone_number: '',
@@ -40,7 +40,7 @@ const Query = () => {
   };
 
   return (
-    <div className='query-container'>
+    <div className='query2-container'>
       <p>Contact <span>Us</span></p>
       <p>Let's get in touch..</p>
       <form onSubmit={handleSubmit}>
@@ -88,4 +88,4 @@ const Query = () => {
   );
 };
 
-export default Query;
+export default Query2;

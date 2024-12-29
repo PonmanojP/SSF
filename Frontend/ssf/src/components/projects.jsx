@@ -10,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/projects/');
+        const response = await fetch('https://ssfoundation.pythonanywhere.com/api/projects/');
         const data = await response.json();
 
         setProjects(data);
@@ -26,7 +26,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchSocials = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/socials/');
+        const response = await fetch('https://ssfoundation.pythonanywhere.com/api/socials/');
         const data = await response.json();
         setSocials(data[0]); // Assuming the API returns an object like { mobile: ..., whatsapp: ..., mail: ..., instagram: ..., facebook: ... }
         console.log(data);

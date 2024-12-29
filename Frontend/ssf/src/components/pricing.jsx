@@ -15,7 +15,7 @@ const Pricing = () => {
     setStandardLoading(true);
     setStandardError(null);
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/standard-price/');
+      const response = await fetch('https://ssfoundation.pythonanywhere.com/api/standard-price/');
       if (!response.ok) {
         throw new Error('Failed to fetch standard price');
       }
@@ -33,7 +33,7 @@ const Pricing = () => {
     setPremiumLoading(true);
     setPremiumError(null);
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/premium-price/');
+      const response = await fetch('https://ssfoundation.pythonanywhere.com/api/premium-price/');
       if (!response.ok) {
         throw new Error('Failed to fetch premium price');
       }

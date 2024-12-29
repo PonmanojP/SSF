@@ -6,7 +6,7 @@ const About = () => {
 
   useEffect(() => {
     // Fetch data from the backend API
-    fetch('http://127.0.0.1:8000/api/about/')
+    fetch('https://ssfoundation.pythonanywhere.com/api/about/')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch about data');

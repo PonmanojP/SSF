@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './service.css';
-import Query from './query'; // Import Query Component
+import Query2 from './query2'; // Import Query Component
 
 const Service = () => {
   const [services, setServices] = useState([]);
@@ -9,7 +9,7 @@ const Service = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/services/');
+        const response = await fetch('https://ssfoundation.pythonanywhere.com/api/services/');
         if (!response.ok) {
           throw new Error('Failed to fetch services');
         }
@@ -59,7 +59,7 @@ const Service = () => {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-btn" onClick={closeModal}>×</button>
-            <Query />
+            <Query2 />
           </div>
         </div>
       )}

@@ -11,7 +11,7 @@ const Accordion = () => {
 
   const fetchTiles = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/standard-categories/");
+      const response = await fetch("https://ssfoundation.pythonanywhere.com/api/standard-categories/");
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
