@@ -38,11 +38,11 @@ const Hero = () => {
   return (
     <div className='hero-container' id='home'>
       <div className='hero-image'>
-        <img src="https://imgs.search.brave.com/kehVrJC4b5Lx7M9UaGHgM9LmrpFAGNwpFkekmvJO77s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS83Ny8z/Ni9sd29GbUEuanBn" alt="" />
+        <img src="./hero.jpeg" alt="" />
         <div className='overlay'>
           <div className='intro-text'>
             <h1>SS <span>Foundation</span></h1>
-            <h3><span>Dreams</span> Come True</h3>
+            <h3><span>Dreams</span> Come True...</h3>
             <center>
               <div className="input-container">
                 <input

@@ -23,10 +23,10 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <> 
       <div className={`nav-container ${scrolled ? 'scrolled' : ''}`}>
         <div className="logo">
-          <img src="/ss_foundation_logo.png" alt="Logo" />
+          <img src="logo.png" alt="Logo" />
         </div>
         <button
           className={`hamburger ${scrolled ? 'scrolled' : ''}`}

@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="footer-inner">
         <div className="footer-left">
           <div className="footer-logo">
-            <img src="/ss_foundation_logo.png" alt="logo" />
+            <img src="logo.png" alt="logo" />
           </div>
           <p>&copy; 2024 SS Foundation. All rights reserved</p>
         </div>
